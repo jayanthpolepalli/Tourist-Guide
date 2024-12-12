@@ -1,0 +1,73 @@
+.taking .in,select{
+    border: .5px solid var(--active);
+    border-radius: 5px;
+    height: 25px;
+    width: 95%;
+    position: absolute;
+    left: 2.5%;
+    padding: 1px;
+    outline: 1px solid transparent;
+}
+.submit{
+    /* border: .5px solid var(--active); */
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 96%;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 2.5%;
+    padding: 1px;
+    background-color: var(--heading);
+
+}
+input[type="file"]::file-selector-button{
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 100%;
+    outline: none;
+}
+textarea{
+    border: .5px solid var(--active);
+    border-radius: 5px;
+    width: 95%;
+    position: absolute;
+    left: 2.5%;
+    padding: 1px;
+    outline: 1px solid transparent;
+    height: 100px;
+}
+.contribute{
+    width: 500px;
+    height: 1500px;
+    position: relative;
+    left: 32%;
+    top: 40px;
+    box-shadow:3px 3px 0px var(--active), 0px 0px 0px 3px var(--active);
+    border-radius: 12px;
+}
+.taking p{
+    margin-bottom: 5px;
+    margin-left: 17px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 13px;
+}
+.taking{
+    width: 98%;
+    display: block;
+    height:auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: inherit;
+}
+#map{
+    width: 95%;
+    position: absolute;
+    left: 2.5%;
+    height: 500px;
+}

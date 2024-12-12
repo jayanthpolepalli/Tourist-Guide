@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- this code is only to insert the map tiler map in the webpage -->
+<html lang="en">
+<head>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.umd.min.js"></script>
+<link href="https://cdn.maptiler.com/maptiler-sdk-js/v2.2.2/maptiler-sdk.css" rel="stylesheet" />
+<script src="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/maptilersdk.umd.js"></script>
+<link href="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #map{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+    maptilersdk.config.apiKey = '5XqgoX7F4Dc20FOSp2iK';
+    a=new maptilersdk.LngLat(79.43704226976661, 13.623087450903057)
+
+const map = new maptilersdk.Map({
+  container: 'map', // container's id or the HTML element in which the SDK will render the map
+  style: maptilersdk.MapStyle.HYBRID,
+   geolocate:maptilersdk.GeolocationType.POINT
+});
+const gc = new maptilersdkMaptilerGeocoder.GeocodingControl({
+    marker:false,
+    // maplibregl:true,
+    // showResultMarker:false,
+});
+map.addControl(gc, 'top-left');
+marker=new maptilersdk.Marker({
+    color:"#fcc603",
+    draggable:true
+});
+map.on('click',(e)=>{
+if(marker){
+    marker.remove()
+}
+marker.setLngLat(e.lngLat).addTo(map);
+alert(marker.getLngLat())
+});
+</script><iframe src="https://www.google.com/maps?q=13.650150308269078,79.41399200396984&hl=ez;z=14&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

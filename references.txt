@@ -1,0 +1,3 @@
+https://developers.google.com/maps/documentation/javascript/examples/event-click-latlng#maps_event_click_latlng-html-for map 
+https://www.stechies.com/call-javascript-function-from-php/--for running js from php
+https://www.incredibleindia.org/content/incredible-india-v2/en/search.html?q=tirupati --used for pictures in destination
